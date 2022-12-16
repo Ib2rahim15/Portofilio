@@ -148,6 +148,10 @@ mix-blend-mode: difference;
 #contact {
   width: 100%;
   height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: var(--dark);
+  padding-bottom: 100px;
 }
 
 .section-header {
@@ -168,33 +172,42 @@ mix-blend-mode: difference;
   padding: 20px;
   position: relative;
   max-width: 840px;
+  
 }
 
 /* Left contact page */
 .form-horizontal {
-  /*float: left;*/
   font-family: 'Lato';
   font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: nowrap;
+  justify-content: center;
+  width: 80%;
 }
 
-.form-control, 
-textarea {
-  max-width: 100%;
-  background-color: #000;
+.form-control{
+  max-width: 400px;
+  background-color: var(--dark) !important;
   color: #fff;
   letter-spacing: 1px;
+  margin: 10px 0;
+  font-size: 1.5rem !important;
 }
-
+#name,#email{
+  width: 400px;
+}
 .send-button {
   margin-top: 15px;
-  height: 2rem;
+  height: 5rem;
   width: 400px;
   overflow: hidden;
   transition: all .2s ease-in-out;
 }
 
 .alt-send-button {
-  width: 400px;
+  width: 100%;
   height: 34px;
   transition: all .2s ease-in-out;
 }
@@ -207,7 +220,7 @@ textarea {
 }
 
 .alt-send-button:hover {
-  transform: translate3d(0px, -29px, 0px);
+  transform: translate3d(0px, -20px, 0px);
 }
 
 /* Begin Right Contact Page */
@@ -329,6 +342,8 @@ hr {
   .contact-wrapper {
     display: flex;
     flex-direction: column;
+    overflow: hidden;
+    padding: 0 10%;
   }
   .direct-contact-container, .form-horizontal {
     margin: 0 auto;
@@ -356,16 +371,6 @@ hr {
     float: none;
     margin: 0 auto;
   }  
-  .form-control, textarea {
-    
-    margin: 0 auto;
-  }
- 
-  
-  .name, .email, textarea {
-    width: 280px;
-  } 
-  
   .direct-contact-container {
     margin-top: 60px;
     max-width: 280px;
@@ -389,6 +394,6 @@ hr {
 
 @media screen and (max-width: 410px) {
   .send-button {
-    width: 99%;
+    width: 90%;
   }
 }

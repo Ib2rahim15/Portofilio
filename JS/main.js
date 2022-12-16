@@ -2,7 +2,7 @@
 const listWord = ["ibrahim_waell","Disgnerr","Porgramerr","TicTockerr"]
 let i =0
 let j = 0
-function fun(){
+function type(){
     if (j<listWord.length) {
         if (i < listWord[j].length) {
             NameAuthor.innerText += listWord[j].charAt(i)
@@ -20,5 +20,5 @@ function fun(){
     }
 }
 setInterval(() => {
-    fun()
+    type()
 }, 500);
